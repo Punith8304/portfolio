@@ -74,8 +74,8 @@ const PROJECTS_DATA = [
     period: 'January 2026 - March 2026',
     description: 'A real-time, zero-friction messaging platform with a Linux-terminal inspired UI.',
     longDescription: 'Engineered a real-time communications application utilizing Next.js, Node.js, and Socket.io. Built with privacy and a high-efficiency user experience in mind, it supports message persistence, allowing users to access chat history, and features dynamic social discovery without phone-number or email verification barriers.',
-    tech: ['Next.js', 'Socket.io', 'Node.js', 'Express.js', 'MongoDB', 'Mongoose'],
-    link: 'https://github.com/Punith8304/charkaro',
+    tech: ['Next.js', 'Socket.io', 'Node.js', 'Typescript', 'Express.js', 'MongoDB', 'Mongoose'],
+    link: 'https://github.com/Punith8304/chatkaro',
     category: 'MERN',
     status: 'Completed',
     highlights: [
@@ -91,7 +91,7 @@ const PROJECTS_DATA = [
     period: 'February 2025 - May 2025',
     description: 'A comprehensive broker-free property rental interface featuring map integration of map systems.',
     longDescription: 'Developed an innovative full-stack real estate web application that directly connects property owners and tenants without brokers, streamlining negotiations and apartment searches based on location, budget, and custom criteria.',
-    tech: ['React.js', 'PostgreSQL', 'Node.js', 'Express.js', 'REST APIs', 'Google Maps API'],
+    tech: ['React.js', 'PostgreSQL', 'Node.js', 'Javascript', 'Express.js', 'REST APIs', 'Google Maps API'],
     category: 'PERN',
     status: 'Completed',
     highlights: [
@@ -138,15 +138,16 @@ const COMMANDS = {
       'Name: Akula Punith Kumar',
       'Batch: 2026 Fresh Graduate / Software Developer',
       'Degree: B.Tech in Chemical Engineering (AP IIIT, R.K. Valley)',
-      'Interests: Full-Stack Web Development, UI/UX, Filmmaking/Editing, Teaching',
+      'Interests & Core Focus:',
+      '  - Mathematics: Algebra, Calculus, Statistics & Probability, Trigonometry',
+      '  - Science & Mechanics: Calculus, Vectors, Motions, and Forces',
+      '  - Interests: Filmmaking and Editing, Problem-Solving, Teaching',
       'Philosophy:',
-      '  I blend analytical methodologies learned from engineering',
-      '  with modern web architectures (MERN/PERN). I prioritize clean,',
-      '  maintainable, and reusable code.',
+      '  - Build clean, maintainable, and reusable code with modern web architectures.',
       '',
       'Engineering Focus:',
-      '  - CommonJS module ecosystem, Node.js event loop execution',
-      '  - Prototypal inheritance, event-driven architecture efficiency.'
+      '  - Object-Oriented Programming (OOP), Node.js Event Loop',
+      '  - Cluster Module, Asynchronous Handling, Prototypal Inheritance.'
     ]
   },
   skills: {
@@ -184,7 +185,7 @@ const COMMANDS = {
       'Email:   punithakula1210@gmail.com',
       'Phone:   +91 7569639418',
       'GitHub:  https://github.com/Punith8304',
-      'LinkedIn: https://www.linkedin.com/in/akula-punith-kumar'
+      'LinkedIn: https://www.linkedin.com/in/punith-kumar-akula'
     ]
   }
 };
@@ -216,7 +217,6 @@ export default function Portfolio() {
     let newOutput = [...terminalOutput, `> ${inputVal}`];
 
     if (cmd === 'clear') {
-      // Retain the first three lines of the welcome message
       newOutput = initialTerminalOutput;
     } else if (COMMANDS[cmd]) {
       newOutput.push(...COMMANDS[cmd].output);
@@ -311,7 +311,6 @@ export default function Portfolio() {
                     boxShadow: '0 15px 30px rgba(0,0,0,0.5)',
                   }}
                 >
-                  {/* Invisible padding bridge for hover safety */}
                   <div style={{ position: 'absolute', top: '-15px', left: 0, right: 0, height: '15px', cursor: 'default' }} />
                   
                   <a href="https://github.com/Punith8304/lendhome" target="_blank" rel="noreferrer" style={{ display: 'block', textDecoration: 'none', padding: '6px 8px', borderRadius: '4px', transition: 'background-color 0.2s' }} className="selector-link">
@@ -477,7 +476,7 @@ export default function Portfolio() {
             </a>
 
             <a 
-              href="https://www.linkedin.com/in/akula-punith-kumar" 
+              href="https://www.linkedin.com/in/punith-kumar-akula" 
               target="_blank" 
               rel="noreferrer"
               style={{ color: '#94a3b8', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px', transition: 'color 0.2s', fontSize: '12px', fontFamily: 'monospace' }}
@@ -489,7 +488,7 @@ export default function Portfolio() {
             </a>
             
             <a 
-              href="https://example.com/resume.pdf" 
+              href="./punith_resume_mern.pdf" 
               target="_blank" 
               rel="noreferrer" 
               style={{
@@ -698,23 +697,36 @@ export default function Portfolio() {
                 padding: '44px',
                 borderRadius: '16px',
                 border: '1px solid #334155',
-                height: '320px',
+                height: '420px',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between'
               }}
             >
-              <div style={{ display: 'flex', gap: '32px' }}>
-                <GraduationCap style={{ color: '#6366f1', flexShrink: 0 }} size={42} />
-                <div>
-                  <h4 style={{ fontSize: '17px', color: '#ffffff', fontWeight: '700', margin: '0 0 8px 0' }}>AP IIIT, R.K. Valley</h4>
-                  <p style={{ fontSize: '11px', color: '#6366f1', fontFamily: 'monospace', marginBottom: '32px', letterSpacing: '0.5px' }}>July 2022 - Current | Kadapa, AP</p>
-                  <p style={{ fontSize: '14px', color: '#64748b', lineHeight: '1.8', margin: 0 }}>
-                    B.Tech. in Chemical Engineering. I balance analytical industrial engineering concepts 
-                    with web application development.
-                  </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '36px' }}>
+                <div style={{ display: 'flex', gap: '32px' }}>
+                  <GraduationCap style={{ color: '#6366f1', flexShrink: 0 }} size={42} />
+                  <div>
+                    <h4 style={{ fontSize: '17px', color: '#ffffff', fontWeight: '700', margin: '0 0 8px 0' }}>AP IIIT, R.K. Valley</h4>
+                    <p style={{ fontSize: '11px', color: '#6366f1', fontFamily: 'monospace', marginBottom: '8px', letterSpacing: '0.5px' }}>July 2022 - Current | Kadapa, AP</p>
+                    <p style={{ fontSize: '14px', color: '#64748b', lineHeight: '1.8', margin: 0 }}>
+                      B.Tech. in Chemical Engineering.
+                    </p>
+                  </div>
+                </div>
+
+                <div style={{ display: 'flex', gap: '32px' }}>
+                  <GraduationCap style={{ color: '#6366f1', flexShrink: 0 }} size={42} />
+                  <div>
+                    <h4 style={{ fontSize: '17px', color: '#ffffff', fontWeight: '700', margin: '0 0 8px 0' }}>AP IIIT, R.K. Valley</h4>
+                    <p style={{ fontSize: '11px', color: '#6366f1', fontFamily: 'monospace', marginBottom: '8px', letterSpacing: '0.5px' }}>2020 - 2022 | Kadapa, AP</p>
+                    <p style={{ fontSize: '14px', color: '#64748b', lineHeight: '1.8', margin: 0 }}>
+                      Pre-University Course (PUC) / MPC.
+                    </p>
+                  </div>
                 </div>
               </div>
+
               <span style={{ fontSize: '10px', color: '#334155', fontFamily: 'monospace', paddingTop: '24px', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
                 # EDUCATION HISTORY
               </span>
@@ -732,7 +744,7 @@ export default function Portfolio() {
                 padding: '44px',
                 borderRadius: '16px',
                 border: '1px solid #334155',
-                height: '320px',
+                height: '420px',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between'
@@ -740,26 +752,34 @@ export default function Portfolio() {
             >
               <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
                 <div style={{ display: 'flex', gap: '24px' }}>
-                  <Video size={20} style={{ color: '#6366f1', flexShrink: 0, marginTop: '2px' }} />
+                  <BookOpen size={20} style={{ color: '#6366f1', flexShrink: 0, marginTop: '2px' }} />
                   <div>
-                    <div style={{ fontSize: '12px', fontWeight: '700', color: '#ffffff', marginBottom: '4px' }}>Filmmaking & Video Editing</div>
-                    <div style={{ fontSize: '11px', color: '#64748b' }}>I apply storytelling techniques to UI/UX design components.</div>
+                    <div style={{ fontSize: '12px', fontWeight: '700', color: '#ffffff', marginBottom: '4px' }}>Mathematics</div>
+                    <div style={{ fontSize: '11px', color: '#64748b' }}>Algebra, Calculus, Statistics & Probability, Trigonometry</div>
                   </div>
                 </div>
 
                 <div style={{ display: 'flex', gap: '24px' }}>
-                  <BookOpen size={20} style={{ color: '#6366f1', flexShrink: 0, marginTop: '2px' }} />
+                  <Cpu size={20} style={{ color: '#6366f1', flexShrink: 0, marginTop: '2px' }} />
                   <div>
-                    <div style={{ fontSize: '12px', fontWeight: '700', color: '#ffffff', marginBottom: '4px' }}>Teaching & Mentoring</div>
-                    <div style={{ fontSize: '11px', color: '#64748b' }}>I am passionate about breaking down technical architectures.</div>
+                    <div style={{ fontSize: '12px', fontWeight: '700', color: '#ffffff', marginBottom: '4px' }}>Science & Mechanics</div>
+                    <div style={{ fontSize: '11px', color: '#64748b' }}>Calculus, Vectors, Motions, and Forces (applied in analyzing and balancing weights/pressure)</div>
+                  </div>
+                </div>
+
+                <div style={{ display: 'flex', gap: '24px' }}>
+                  <Video size={20} style={{ color: '#6366f1', flexShrink: 0, marginTop: '2px' }} />
+                  <div>
+                    <div style={{ fontSize: '12px', fontWeight: '700', color: '#ffffff', marginBottom: '4px' }}>Core Interests</div>
+                    <div style={{ fontSize: '11px', color: '#64748b' }}>Filmmaking and Editing, Problem-Solving, Teaching</div>
                   </div>
                 </div>
 
                 <div style={{ display: 'flex', gap: '24px' }}>
                   <Award size={20} style={{ color: '#6366f1', flexShrink: 0, marginTop: '2px' }} />
                   <div>
-                    <div style={{ fontSize: '12px', fontWeight: '700', color: '#ffffff', marginBottom: '4px' }}>Algorithmic Optimization</div>
-                    <div style={{ fontSize: '11px', color: '#64748b' }}>Interested in data structures and architecture schema design.</div>
+                    <div style={{ fontSize: '12px', fontWeight: '700', color: '#ffffff', marginBottom: '4px' }}>Leadership / Teaching</div>
+                    <div style={{ fontSize: '11px', color: '#64748b' }}>Passionate about mentoring peers and breaking down complex technical architectures.</div>
                   </div>
                 </div>
               </div>
