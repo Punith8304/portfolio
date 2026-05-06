@@ -488,7 +488,7 @@ export default function Portfolio() {
             </a>
             
             <a 
-              href="./punith_resume_mern.pdf" 
+              href="./Punith_Resume.pdf" 
               target="_blank" 
               rel="noreferrer" 
               style={{
